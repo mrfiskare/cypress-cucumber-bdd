@@ -1,0 +1,19 @@
+{
+  "name": "cypress-cucumber-bdd",
+  "version": "1.0.0",
+  "description": "Cypress Cucumber Automation Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrfiskare/cypress-cucumber-bdd.git"
+  },
+  "author": "Roland Halasz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrfiskare/cypress-cucumber-bdd/issues"
+  },
+  "homepage": "https://github.com/mrfiskare/cypress-cucumber-bdd#readme"
+}
