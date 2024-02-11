@@ -36,3 +36,25 @@ For setting up the Cucumber Preprocessor
 [this guide](https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/quick-start.md) was used. 
 It also required [TypeScript](https://docs.cypress.io/guides/tooling/typescript-support#Install-TypeScript) to be properly installed inside the project.
 
+### What is Gherkin?
+
+**Gherkin is a language** that Cucumber understands. It is a Business Readable,
+Domain Specific Language that lets you describe software's behavior without
+detailing how tha behavior is implemented.
+
+(Cucumber: Basically, it acts like a bridge between the project's business side and technical side.)
+
+#### Popular Keywords:
+
+* **Feature File:** High level description of a software feature / test scenario(s).
+* **Scenario:** Used to describe a specific test scenario(s) inside a *feature file*.
+* **Given:** Describes the pre-requisite for given test scenario(s).
+* **When:** Describes an event or action.
+* **And:** Provides a logical AND condition between statements.
+* **Then:** Used to describe an expected outcome.
+
+A feature file describes one or more scenarios regarding a software feature. Then,
+it defines one or more test cases regarding that scenario, using the Gherkin keywords.
+
+
+
