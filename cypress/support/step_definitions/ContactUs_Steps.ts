@@ -49,6 +49,6 @@ When(`I type a specific email address {string}`, (email: string) => {
 When(
   `I type a specific word {string} and a number {int} within the comment input field`,
   (word: string, number: number) => {
-    cy.get('textarea[name="message"]').type(word + number);
+    cy.get('textarea[name="message"]').type(word + ' ' + number);
   }
 );
