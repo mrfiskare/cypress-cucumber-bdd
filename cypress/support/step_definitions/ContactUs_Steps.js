@@ -26,3 +26,10 @@ Then(
     cy.get('h1').should('have.text', 'Thank You for your Message!');
   }
 );
+
+Then(
+  `I should be presented with a unsuccessful contact us submission message`,
+  () => {
+    cy.get('body').contains('Error: Invalid email address');
+  }
+);
