@@ -23,5 +23,11 @@
     "esbuild": "^0.20.0",
     "prettier": "3.2.5",
     "typescript": "^5.3.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/support/step_definitions/**/*.js"
+  },
+  "dependencies": {
+    "prettier-plugin-gherkin": "^2.2.1"
   }
 }
