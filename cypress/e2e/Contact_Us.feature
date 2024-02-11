@@ -20,6 +20,7 @@ Feature: WebdriverUniversity - Contact Us Page
     Then I should be presented with a unsuccessful contact us submission message
 
   Scenario: Valid Contact Us Form Submission - Using specific data
+    Given I navigate to the WebdriverUniversity homepage
     When I click on the contact us button
     And I type a specific first name "Sarah"
     And I type a specific last name "Woods"

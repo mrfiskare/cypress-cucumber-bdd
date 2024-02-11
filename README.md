@@ -25,8 +25,8 @@ The project closely follows the Udemy course called
 | `cypress/downloads`           |                                                                            |
 | `cypress/e2e`                 | Location of the Cypress E2E test files                                     |
 | `cypress/fixtures`            | For storing specific data, that can be used in the test files              |
-| `cypress/support/commands.js` | For creating and storing custom Cypress commands                           |
-| `cypress/support/e2e.js`      | The first file Cypress reads upon running it. Supports additional plugins. |
+| `cypress/support/commands.ts` | For creating and storing custom Cypress commands                           |
+| `cypress/support/e2e.ts`      | The first file Cypress reads upon running it. Supports additional plugins. |
 | `cypress.config.ts`           | For storing global settings, e.g. base URL, page load time etc.            |
 
 The commands available to use within Cypress can be checked by clicking
@@ -67,4 +67,5 @@ when we forget to fill the email input field.
 
 ## Cucumber Expressions
 
-It is possible to is [regular expressions](https://github.com/cucumber/cucumber-expressions#readme) for Cucumber tests.
+It is possible to use [regular expressions](https://github.com/cucumber/cucumber-expressions#readme)
+and parameters with Cucumber tests.

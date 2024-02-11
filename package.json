@@ -25,7 +25,7 @@
     "typescript": "^5.3.3"
   },
   "cypress-cucumber-preprocessor": {
-    "stepDefinitions": "cypress/support/step_definitions/**/*.js"
+    "stepDefinitions": "cypress/support/step_definitions/**/*.ts"
   },
   "dependencies": {
     "prettier-plugin-gherkin": "^2.2.1"
