@@ -11,9 +11,10 @@ The project closely follows the Udemy course called
 
 ## Requirements
 
-| Name    | Version  |
-|---------|----------|
-| Node.js | 20.8.0   |
-| npm     | 10.2.0   |
-| Cypress |          |
+| Name    | Version |
+|---------|---------|
+| Node.js | 20.8.0  |
+| npm     | 10.2.0  |
+| Cypress |         |
+| OpenJDK | 11.0.22 |
 
