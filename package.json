@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mrfiskare/cypress-cucumber-bdd/issues"
   },
-  "homepage": "https://github.com/mrfiskare/cypress-cucumber-bdd#readme"
+  "homepage": "https://github.com/mrfiskare/cypress-cucumber-bdd#readme",
+  "devDependencies": {
+    "cypress": "^12.14.0"
+  }
 }
