@@ -20,6 +20,7 @@
     "@badeball/cypress-cucumber-preprocessor": "^20.0.1",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
     "cypress": "^12.17.4",
+    "cypress-xpath": "^2.0.1",
     "esbuild": "^0.20.0",
     "prettier": "3.2.5",
     "typescript": "^5.3.3"
