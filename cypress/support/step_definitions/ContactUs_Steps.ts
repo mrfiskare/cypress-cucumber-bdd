@@ -69,6 +69,6 @@ When(
   }
 );
 
-Then(`I should be presented with header text {string}`, () => {
-  cy.xpath('//h1 | //body');
+Then(`I should be presented with header text {string}`, (message: string) => {
+  cy.xpath('//h1 | //body').contains(message);
 });

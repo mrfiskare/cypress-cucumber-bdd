@@ -65,13 +65,29 @@ It is recommended to create positive and negative test scenarios for the feature
 For example, one positive scenario for a successful form submission, and a negative one,
 when we forget to fill the email input field.
 
-## Cucumber Expressions
+## Cucumber / Gherkin useful terms
+
+### Cucumber Expressions
 
 It is possible to use [regular expressions](https://github.com/cucumber/cucumber-expressions#readme)
 and parameters with Cucumber tests.
+
+### Scenario Outlines
 
 Additionally, these expressions can be used within the so-called _Scenario Outlines_ that
 describe the same actions of a scenario with dynamically changed parameters. For example, it
 is very convenient to create a Scenario Outline for a negative and a positive test scenario,
 where we use the same steps but with different values. This approach helps us to be more in
 line with the DRY Principle (Don't Repeat Yourself).
+
+### Examples keyword
+
+When using Scenario Outlines, an Examples table should be created inside the feature file.
+This table contains the different variable to be used for the scenario outline. In the Examples
+table, every row equals to a test case.
+
+### Background keyword
+
+The background section must be defined before the scenarios inside a feature file. It can be used
+to reduce duplications inside the feature file. The content of the background section runs each
+time we run a scenario of the given feature file.

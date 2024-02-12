@@ -1,9 +1,11 @@
 Feature: WebdriverUniversity - Contact Us Page
 
-  # Positive test scenario
-  Scenario: Valid Contact Us Form Submission
+  Background: Pre-conditions
     Given I navigate to the WebdriverUniversity homepage
     When I click on the contact us button
+
+  # Positive test scenario
+  Scenario: Valid Contact Us Form Submission
     And I type a first name
     And I type a last name
     And I enter an email address
@@ -13,8 +15,6 @@ Feature: WebdriverUniversity - Contact Us Page
 
   # Negative test scenario
   Scenario: Invalid Contact Us Form Submission
-    Given I navigate to the WebdriverUniversity homepage
-    When I click on the contact us button
     And I type a first name
     And I type a last name
     And I type a comment
@@ -41,8 +41,9 @@ Feature: WebdriverUniversity - Contact Us Page
     And I click on the submit button
     Then I should be presented with header text '<message>'
 
+    # Note: An apostrophe character inside the Examples table can mess up Cypress
     Examples:
-      | firstName | lastName | emailAddress       | comment           | message                      |
-      | John      | Snow     | john_snow@mail.com | Howdy?            | Thank You for your Message!  |
-      | Kylo      | Ren      | kylo_ren@mail.com  | I ain't Skywalker | Thank You for your Message!  |
-      | Grace     | Hudson   | grace_hudson       | Whoops            | Error: Invalid email address |
+      | firstName | lastName      | emailAddress       | comment                    | message                      |
+      | John      | Snow          | john_snow@mail.com | Howdy?                     | Thank You for your Message!  |
+      | Kylo      | Ren           | kylo-ren@mail.com  | I are not a Skywalker      | Thank You for your Message!  |
+      | Dutch     | van der Linde | grace_hudson       | Whoops this didn't go well | Error: Invalid email address |
