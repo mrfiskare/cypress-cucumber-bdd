@@ -108,3 +108,20 @@ scenarios with a specific tag.
 
 For example:
 `npx cypress run -e TAGS='@regression and not @smoke' --headed`
+
+### Smoke tag
+
+It is also possible to target only a subset of all the tests inside the project. This is
+usually done by using the `@smoke` tag.
+
+## Custom scripts
+
+It is possible to create custom scripts for Cypress in the `scripts` section of the
+`package.json` file. With these scripts we can specify options such as:
+
+- headless / headed mode
+- which browser to use
+- which test spec files to run
+- which tags to target
+
+## Reports
