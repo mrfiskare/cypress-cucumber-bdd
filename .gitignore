@@ -188,11 +188,30 @@ TEST-results.xml
 *.log.*
 dist-*
 build
-.history
 .publish
 _test-output
 cypress.zip
+tmp
+.projects
+*.orig
+screenshots
+videos
+out.js
+examples/*/cypress/logs
+examples/*/cypress/downloads
+snapshots.js
+.nyc_output
+coverage
+dist
+test-data.json
+examples/stubbing-spying__intercept/users5.json
+**/.parcel-cache
+examples/*/data.json
+cypress/downloads
+cypress/videos
+cypress/screenshots
 .babel-cache
+.history
 
 # from config, compiled .js files
 packages/config/src/*.js
