@@ -165,10 +165,19 @@ It uses the JSON file that we generate using Cucumber's aforementioned JSON gene
 
 - Install the latest LTS version: `brew install jenkins-lts`
 - Start the Jenkins service: `brew services start jenkins-lts`
-- Restart the Jenkins service: `brew services restart jenkins-lts`
 - Update the Jenkins version: `brew upgrade jenkins-lts`
 
 After starting the Jenkins service, browse to http://localhost:8080 and follow the
 instructions to complete the installation.
 
 **Note:** Before using Jenkins, make sure to have Java (_OpenJDK_) installed.
+
+### Stopping/Restarting Jenkins on macOS
+
+- UI → Jenkins → Manage Jenkins → Prepare For Shutdown
+- Stop Jenkins service: `brew services stop jenkins-lts`
+- Restart the Jenkins service: `brew services restart jenkins-lts`
+
+### Uninstalling Jenkins on macOS
+
+`/Library/Application Support/Jenkins/Uninstall.command`
