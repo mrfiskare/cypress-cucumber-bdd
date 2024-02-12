@@ -131,7 +131,7 @@ It is possible to create custom scripts for Cypress in the `scripts` section of 
 Cucumber has built-in support for
 [generating HTML](https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/html-report.md) / [JSON](https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/json-report.md) reports.
 
-In order to take advantage of the HTML reporting tool, simply add this code to the
+In order to take advantage of the HTML or JSON reporting tool, simply add this code to the
 `cypress-cucumber-preprocessor` section of the `package.json` file:
 
 ```json
@@ -139,6 +139,10 @@ In order to take advantage of the HTML reporting tool, simply add this code to t
   "html": {
     "enabled": true,
     "output": "cypress/reports/cucumber-html/cucumber-report.html"
+  },
+  "json": {
+    "enabled": true,
+    "output": "cypress/reports/cucumber-json/cucumber-report.json"
   }
 }
 ```
