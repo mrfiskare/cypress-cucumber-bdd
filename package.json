@@ -14,7 +14,6 @@
     "login-and-smoke-pack": "cypress run -e TAGS=\"@smoke or @login\" --headed",
     "smoke-pack-headed": "cypress run -e TAGS=\"@smoke\" --headed",
     "regression-pack-headed": "cypress run -e TAGS=\"@regression and not @smoke\" --headed"
-
   },
   "repository": {
     "type": "git",
@@ -32,6 +31,7 @@
     "cypress": "^12.17.4",
     "cypress-xpath": "^2.0.1",
     "esbuild": "^0.20.0",
+    "multiple-cucumber-html-reporter": "^3.6.2",
     "prettier": "3.2.5",
     "typescript": "^5.3.3"
   },

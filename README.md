@@ -22,7 +22,7 @@ The project closely follows the Udemy course called
 
 | Folder / File                 | Description                                                                |
 | ----------------------------- | -------------------------------------------------------------------------- |
-| `cypress/downloads`           |                                                                            |
+| `cypress/downloads`           | Location of files downloaded during test excecution                        |
 | `cypress/e2e`                 | Location of the Cypress E2E test files                                     |
 | `cypress/fixtures`            | For storing specific data, that can be used in the test files              |
 | `cypress/support/commands.ts` | For creating and storing custom Cypress commands                           |
@@ -149,3 +149,12 @@ In order to take advantage of the HTML or JSON reporting tool, simply add this c
 
 Note: The `output` property is optional. Cucumber places the generated report to the
 project's root folder.
+
+Note: JSON reports can be useful in automated CI/CD environments, such as Jenkins.
+
+### Third party HTML reports
+
+Third party Cucumber HTML reporters are widely available online. They can offer better
+visuals, more detailed results etc. One if the third party reporters is called
+[Multiple Cucumber HTML Reporter](https://www.npmjs.com/package/multiple-cucumber-html-reporter).
+It uses the JSON file that we generate using Cucumber's aforementioned JSON generation tool.
