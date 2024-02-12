@@ -125,3 +125,23 @@ It is possible to create custom scripts for Cypress in the `scripts` section of 
 - which tags to target
 
 ## Reports
+
+### Generating HTML / JSON reports
+
+Cucumber has built-in support for
+[generating HTML](https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/html-report.md) / [JSON](https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/json-report.md) reports.
+
+In order to take advantage of the HTML reporting tool, simply add this code to the
+`cypress-cucumber-preprocessor` section of the `package.json` file:
+
+```json
+{
+  "html": {
+    "enabled": true,
+    "output": "cypress/reports/cucumber-html/cucumber-report.html"
+  }
+}
+```
+
+Note: The `output` property is optional. Cucumber places the generated report to the
+project's root folder.
