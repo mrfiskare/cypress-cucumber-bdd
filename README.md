@@ -69,3 +69,9 @@ when we forget to fill the email input field.
 
 It is possible to use [regular expressions](https://github.com/cucumber/cucumber-expressions#readme)
 and parameters with Cucumber tests.
+
+Additionally, these expressions can be used within the so-called _Scenario Outlines_ that
+describe the same actions of a scenario with dynamically changed parameters. For example, it
+is very convenient to create a Scenario Outline for a negative and a positive test scenario,
+where we use the same steps but with different values. This approach helps us to be more in
+line with the DRY Principle (Don't Repeat Yourself).
