@@ -147,10 +147,10 @@ In order to take advantage of the HTML or JSON reporting tool, simply add this c
 }
 ```
 
-Note: The `output` property is optional. Cucumber places the generated report to the
+**Note:** The `output` property is optional. Cucumber places the generated report to the
 project's root folder.
 
-Note: JSON reports can be useful in automated CI/CD environments, such as Jenkins.
+**Note:** JSON reports can be useful in automated CI/CD environments, such as Jenkins.
 
 ### Third party HTML reports
 
@@ -158,3 +158,17 @@ Third party Cucumber HTML reporters are widely available online. They can offer 
 visuals, more detailed results etc. One if the third party reporters is called
 [Multiple Cucumber HTML Reporter](https://www.npmjs.com/package/multiple-cucumber-html-reporter).
 It uses the JSON file that we generate using Cucumber's aforementioned JSON generation tool.
+
+## Using Cypress with Jenkins
+
+### Installing Jenkins LTS on macOS
+
+- Install the latest LTS version: `brew install jenkins-lts`
+- Start the Jenkins service: `brew services start jenkins-lts`
+- Restart the Jenkins service: `brew services restart jenkins-lts`
+- Update the Jenkins version: `brew upgrade jenkins-lts`
+
+After starting the Jenkins service, browse to http://localhost:8080 and follow the
+instructions to complete the installation.
+
+**Note:** Before using Jenkins, make sure to have Java (_OpenJDK_) installed.
