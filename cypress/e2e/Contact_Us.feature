@@ -43,7 +43,7 @@ Feature: WebdriverUniversity - Contact Us Page
 
     # Note: An apostrophe character inside the Examples table can mess up Cypress
     Examples:
-      | firstName | lastName      | emailAddress       | comment                    | message                      |
-      | John      | Snow          | john_snow@mail.com | Howdy?                     | Thank You for your Message!  |
-      | Kylo      | Ren           | kylo-ren@mail.com  | I are not a Skywalker      | Thank You for your Message!  |
-      | Dutch     | van der Linde | grace_hudson       | Whoops this didn't go well | Error: Invalid email address |
+      | firstName | lastName      | emailAddress       | comment               | message                      |
+      | John      | Snow          | john_snow@mail.com | Howdy?                | Thank You for your Message!  |
+      | Kylo      | Ren           | kylo-ren@mail.com  | I are not a Skywalker | Thank You for your Message!  |
+      | Dutch     | van der Linde | grace_hudson       | Whoops                | Error: Invalid email address |
