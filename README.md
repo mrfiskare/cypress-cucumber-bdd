@@ -161,7 +161,9 @@ It uses the JSON file that we generate using Cucumber's aforementioned JSON gene
 
 ## Using Cypress with Jenkins
 
-### Installing Jenkins LTS on macOS
+### Technical notes
+
+#### Installing Jenkins LTS on macOS
 
 - Install the latest LTS version: `brew install jenkins-lts`
 - Start the Jenkins service: `brew services start jenkins-lts`
@@ -172,12 +174,30 @@ instructions to complete the installation.
 
 **Note:** Before using Jenkins, make sure to have Java (_OpenJDK_) installed.
 
-### Stopping/Restarting Jenkins on macOS
+#### Stopping/Restarting Jenkins on macOS
 
 - UI → Jenkins → Manage Jenkins → Prepare For Shutdown
 - Stop Jenkins service: `brew services stop jenkins-lts`
 - Restart the Jenkins service: `brew services restart jenkins-lts`
 
-### Uninstalling Jenkins on macOS
+#### Uninstalling Jenkins on macOS
 
 `/Library/Application Support/Jenkins/Uninstall.command`
+
+### Configuring Cypress jobs
+
+The initial setup for running Cypress tests can be done by:
+
+1. Manage Jenkins → Plugins → Add → Nodejs Plugin, AnsiColor
+2. New Job → Configure →
+   1. General:
+      1. This project is parameterized
+      2. Choice Parameter
+      3. **Name:** script
+      4. **Choices:** Copy the scripts' name from the `package.json`
+   2. Build Environment:
+      1. Color ANSI Console Output
+      2. Provide Node & npm bin/ folder to PATH
+   3. Build steps:
+      1. `npm install`
+      2. `npm run $script` _(choice parameter)_
