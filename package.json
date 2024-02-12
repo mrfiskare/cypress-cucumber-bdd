@@ -9,11 +9,11 @@
     "full-regression-headless-chrome": "cypress run --browser chrome --spec 'cypress/e2e/*.feature'",
     "contact-us-tests-headed-chrome": "cypress run --headed --browser chrome --spec 'cypress/e2e/Contact_Us.feature'",
     "contact-us-tests-headed": "cypress run -e TAGS=\"@contact-us\" --headed",
-    "contact-us-tests-headless": "cypress run -e TAGS=\"@contact-us\"",
-    "login-tests-headed": "cypress run -e TAGS=\"@login\" --headed",
+    "contact-us-tests-headless": "cypress run -e TAGS=\"@contact-us\" && node cucumber-html-report.js",
+    "login-tests-headed": "cypress run -e TAGS=\"@login\" --headed && node cucumber-html-report.js",
     "login-and-smoke-pack": "cypress run -e TAGS=\"@smoke or @login\" --headed",
     "smoke-pack-headed": "cypress run -e TAGS=\"@smoke\" --headed",
-    "regression-pack-headed": "cypress run -e TAGS=\"@regression and not @smoke\" --headed"
+    "regression-pack-headed": "cypress run -e TAGS=\"@regression and not @smoke\" --headed && node cucumber-html-report.js"
   },
   "repository": {
     "type": "git",
