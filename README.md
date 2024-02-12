@@ -82,12 +82,29 @@ line with the DRY Principle (Don't Repeat Yourself).
 
 ### Examples keyword
 
-When using Scenario Outlines, an Examples table should be created inside the feature file.
+When using `Scenario Outlines`, an `Examples` table should be created inside the feature file.
 This table contains the different variable to be used for the scenario outline. In the Examples
 table, every row equals to a test case.
 
 ### Background keyword
 
-The background section must be defined before the scenarios inside a feature file. It can be used
+The `Background` section must be defined before the scenarios inside a feature file. It can be used
 to reduce duplications inside the feature file. The content of the background section runs each
 time we run a scenario of the given feature file.
+
+### Tags
+
+Tags can be used to... well, to tag features and/or scenarios inside the project. It is possible to
+use the same tag for multiple features/scenarios. For example the `@regression` can be added to
+both the `Login_Portal.feature` and the `Contact_Us.feature`. In this case it is possible to
+target the `@regression` tag, which will in turn use the scenarios from both of the tagged
+features.
+
+This can be used with the following command:
+`npx cypress run -e TAGS='@regression' --headed`
+
+Additionally, it is possible to run scenarios with a given tag, but exclude some of the
+scenarios with a specific tag.
+
+For example:
+`npx cypress run -e TAGS='@regression and not @smoke' --headed`

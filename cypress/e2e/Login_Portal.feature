@@ -1,3 +1,5 @@
+@login
+@regression
 Feature: WebdriverUniversity - Login Portal Page
 
   # Challenge - Writing tests for the login portal page

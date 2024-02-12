@@ -1,3 +1,5 @@
+@contact-us
+@regression
 Feature: WebdriverUniversity - Contact Us Page
 
   Background: Pre-conditions
@@ -33,6 +35,7 @@ Feature: WebdriverUniversity - Contact Us Page
     Then I should be presented with a successful contact us submission message
 
   # DRY Principle - Avoiding duplications using dynamic Scenario Outlines
+  @smoke
   Scenario Outline: Validate contact us page
     Given I navigate to the WebdriverUniversity homepage
     When I click on the contact us button
