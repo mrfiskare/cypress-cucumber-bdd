@@ -184,20 +184,38 @@ instructions to complete the installation.
 
 `/Library/Application Support/Jenkins/Uninstall.command`
 
-### Configuring Cypress jobs
+### Configuring Cypress jobs using custom scripts
 
 The initial setup for running Cypress tests can be done by:
 
 1. Manage Jenkins → Plugins → Add → Nodejs Plugin, AnsiColor
 2. New Job → Configure →
-   1. General:
+   1. **General:**
       1. This project is parameterized
       2. Choice Parameter
       3. **Name:** script
       4. **Choices:** Copy the scripts' name from the `package.json`
-   2. Build Environment:
+   2. **Build Environment:**
       1. Color ANSI Console Output
       2. Provide Node & npm bin/ folder to PATH
-   3. Build steps:
+   3. **Build steps:**
       1. `npm install`
       2. `npm run $script` _(choice parameter)_
+      3. `node cucumber-html-report.js`
+
+### Configuring Cypress jobs using tags
+
+1. Manage Jenkins → Plugins → Add → Nodejs Plugin, AnsiColor
+2. New Job → Configure →
+   1. **General:**
+      1. This project is parameterized
+      2. Choice Parameter
+      3. **Name:** tag
+      4. **Choices:** copy the names of tags used in the project _(e.g. regression, smoke)_
+   2. **Build Environment:**
+      1. Color ANSI Console Output
+      2. Provide Node & npm bin/ folder to PATH
+   3. **Build steps:**
+      1. `npm install`
+      2. `npx cypress run -e TAGS="@$tag and not @ignore"` _(choice parameter)_
+      3. `node cucumber-html-report.js`
