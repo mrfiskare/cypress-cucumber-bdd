@@ -104,7 +104,8 @@ This can be used with the following command:
 `npx cypress run -e TAGS='@regression' --headed`
 
 Additionally, it is possible to run scenarios with a given tag, but exclude some of the
-scenarios with a specific tag.
+scenarios with a specific tag. Also, we can use the @ignore tag to exclude a scenario from
+the test execution.
 
 For example:
 `npx cypress run -e TAGS='@regression and not @smoke' --headed`
@@ -205,8 +206,7 @@ The initial setup for running Cypress tests can be done by:
 
 ### Configuring Cypress jobs using tags
 
-1. Manage Jenkins → Plugins → Add → Nodejs Plugin, AnsiColor
-2. New Job → Configure →
+1. New Job → Configure →
    1. **General:**
       1. This project is parameterized
       2. Choice Parameter
@@ -219,3 +219,11 @@ The initial setup for running Cypress tests can be done by:
       1. `npm install`
       2. `npx cypress run -e TAGS="@$tag and not @ignore"` _(choice parameter)_
       3. `node cucumber-html-report.js`
+
+### Configuring Cypress reports in Jenkins
+
+1. Manage Jenkins → Plugins → Add → Cucumber reports
+2. Configure a job → Post-build Actions
+3. Cucumber reports → Advanced ...
+4. JSON Report Location
+5. File include pattern: `**/cucumber-report.json`
